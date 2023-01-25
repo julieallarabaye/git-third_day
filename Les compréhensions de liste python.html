@@ -1,0 +1,312 @@
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="fr"><!--<![endif]--><head><meta charset="utf-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=function(){var e=0,i=0,t=[],n=!1,s=[],r=[],o=!0,a=function(e,i,n,s,r,o,a){var l=this;this.name=e,this.funcName=i,this.parameters=null===n?null:n instanceof Array?n:[n],this.isBlock=s,this.blockedBy=r,this.deleteWhenComplete=o,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.isTimeDelay=!1,this.process=function(){u("... func = "+e),l.isInitialized=!0,l.isComplete=!0,u("... func.apply: "+e);var i=l.funcName.split("."),n=null;i.length>3||(n=3===i.length?window[i[0]][i[1]][i[2]]:2===i.length?window[i[0]][i[1]]:window[l.funcName]),null!=n&&n.apply(null,this.parameters),!0===l.deleteWhenComplete&&delete t[e],!0===l.isBlock&&(u("----- F'D: "+l.name),f())}},l=function(e,i,t,n,s,r,o){var a=this;this.name=e,this.path=i,this.async=s,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=o,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)?window.__ezScriptHost+e:e},this.process=function(){a.isInitialized=!0,u("... file = "+e);var i=document.createElement("script");i.src=this.getSrc(this.path),!0===s?i.async=!0:!0===r&&(i.defer=!0),i.onerror=function(){u("----- ERR'D: "+a.name),a.isError=!0,!0===a.isBlock&&f()},i.onreadystatechange=i.onload=function(){var e=i.readyState;u("----- F'D: "+a.name),e&&!/loaded|complete/.test(e)||(a.isComplete=!0,!0===a.isBlock&&f())},document.getElementsByTagName("head")[0].appendChild(i)}},c=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function d(e){!0!==h(e)&&0!=o&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return u(e.name+" blocked = TIME DELAY!"),!0;if(e.blockedBy instanceof Array)for(var i=0;i<e.blockedBy.length;i++){var s=e.blockedBy[i];if(!1===t.hasOwnProperty(s))return u(e.name+" blocked = "+s),!0;if(!0===e.proceedIfError&&!0===t[s].isError)return!1;if(!1===t[s].isComplete)return u(e.name+" blocked = "+s),!0}return!1}function u(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function f(){++e>200||(u("let's go"),m(s),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?u(t.name+": error"):!0===t.isComplete?u(t.name+": complete already"):!0===t.isInitialized&&u(t.name+": initialized already"):t.process()}}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,u("TDELAY -----"),f()}),5e3)}),!1),{addFile:function(e,i,n,o,a,c,h,u){var f=new l(e,i,n,o,a,c,h);!0===u?s[e]=f:r[e]=f,t[e]=f,d(f)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,u(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,d(n)},addFunc:function(e,n,o,l,c,h,u,f,m){!0===h&&(e=e+"_"+i++);var p=new a(e,n,o,l,c,u,f);!0===m?s[e]=p:r[e]=p,t[e]=p,d(p)},addDelayFunc:function(e,i,n){var s=new a(e,i,n,!1,[],!0,!0);s.isTimeDelay=!0,u(e+" ...  FUNCTION! TDELAY"),r[e]=s,t[e]=s,d(s)},items:t,processAll:f,setallowLoad:function(e){o=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?u(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new c(e,!0);u("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer></script><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/><title>Les compréhensions de liste python</title><meta content="Apprendre à utiliser les listes de compréhension en python, cours pour débutants" name="description"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="comprehension,list,listes,python,cours,débutants" name="Keywords"/><meta content="fr" http-equiv="Content-Language"/><meta content="index, follow" name="robots"/><meta content="All" name="audience"/><meta content="All" name="rating"/><meta content="2 days" name="revisit-after"/><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/><meta content="yes" name="apple-mobile-web-app-capable"/><link href="/images/python.png" rel="image_src"/><meta content="/images/python.png" property="og:image"/><link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet"/><style>
+     html{padding:0px;margin:0px;  }
+a{color:#428bca;text-decoration:none;}
+body{
+margin:0px;
+padding:0px;
+font-family: 'Open Sans', sans-serif;
+font-size:17px;
+line-height:1.42857143;
+color:#333;
+background-color:#fff;
+padding-bottom:20px;
+}
+#menu_main li a{font-size:0.9em;}
+ul{padding:0px;margin:0px;}
+p{margin:0 0 10px;}
+li{list-style-type:none;padding-left:10px;}
+h1, h2, h3{font-weight:500;line-height:1.1;margin-top:30px !important;margin-bottom:10px !important;}
+h1{font-size:2em !important;}
+h2{font-size:1.5em !important;}
+#page{max-width:1000px;padding:20px;padding-top:0px;margin-top:0px;}
+#page p{text-align:justify;}
+#page h3{font-size:1.2em !important;margin-top:10px;margin-bottom:10px;}
+.breadcrumb{padding:2px !important;margin-bottom:10px !important;}
+.links_top{
+padding:0px;margin-top:20px;margin-bottom:30px;
+display:block;
+clear:both;
+}
+.links_top > div{
+display:block;
+width:100%;
+}
+.links_top_next{
+text-align:right;
+}
+
+
+
+#menu_main{position:relative;}
+@media (max-width:500px){.float-center{float:none !important;position:relative;clear:both;}
+}
+@media (min-width:993px){#page{margin-left:230px;}
+#menu_main{position:fixed;top:0px;left:0px;width:220px;background-color:#173025;overflow:hidden;margin-top:0px;padding:0px;padding-left:10px;vertical-align:middle !important;border-right:1px solid #ccc;overflow-x:hidden;}
+#menu_main h3{padding-left:0px;font-size:20px;font-weight:800 !important;line-height:20px !important;}
+#menu_main li{padding:1px;}
+#menu_main li a{width:100%;display:block;color:#eee;}
+#menu_main li a:hover{color:#44B78C;text-decoration:none;}
+}
+@media (max-width:992px){#page{padding:10px;}
+.container{margin:0px;padding:0px;}
+.row{margin:0px;padding:0px;}
+.row > div{margin:0px;padding:0px;}
+#logo_menu{display:none;}
+#menu_main{width:100%;}
+#menu_main h3{width:100%;text-align:center;}
+#menu_main li{width:100%;text-align:center;}
+#menu_main li a{width:100%;text-align:center;padding:2px;display:block;-webkit-transition-property:background-color;-webkit-transition-duration:0.5;-moz-transition-property:background-color;-moz-transition-duration:0.5s;transition-property:background-color;transition-duration:0.5s;width:100%;text-align:center;display:block;padding:6px;background-color:#f8f8f8;border:1px solid #ccc;font-size:1.2em;color:#111;text-decoration:none;margin:-1px 0px 0px -1px;}
+}
+@media (min-width:600px) and (max-width:800px){.row > div{width:50%;float:left;}
+}
+@media (min-width:800px) and (max-width:1000px){.row > div{width:33%;float:left;}
+}
+@media (min-width:992px){.row{width:100%;margin:0px;padding:0px;}
+}
+@media (max-width:992px){#menu_main{height:auto;}
+}
+.breadcrumb{padding:6px 6px;background-color:white !important;}
+.breadcrumb-list{padding-top:15px;padding-bottom:5px;}
+#category_menu{width:100%;max-width:500px;margin:auto;margin-top:40px;}
+#category_menu li{width:100%;}
+#category_menu a{-webkit-transition-property:background-color;-webkit-transition-duration:0.5;-moz-transition-property:background-color;-moz-transition-duration:0.5s;transition-property:background-color;transition-duration:0.5s;width:100%;text-align:center;display:block;padding:6px;background-color:#f8f8f8;border:1px solid #ccc;font-size:1.2em;color:#111;text-decoration:none;margin:-1px 0px 0px -1px;}
+#category_menu a:hover{background-color:white;}
+#pub_right{display:none;text-align:right;}
+@media (min-width:1100px) and (max-width:1500px){
+#pub_right{display:block;width:160px;position:fixed;top:0px;right:0px;}
+}
+@media (min-width:1500px){
+#pub_right{display:block;width:300px;position:fixed;top:0px;right:0px;}
+}
+@media (min-width:1100px){#page{max-width:700px;}
+}
+@media (min-width:1150px){#page{max-width:750px;}
+}
+@media (min-width:1200px){#page{max-width:800px;}
+}
+@media (min-width:1250px){#page{max-width:850px;}
+}
+@media (min-width:1300px){#page{max-width:900px;}
+}
+@media (min-width:1350px){#page{max-width:950px;}
+}
+@media (min-width:1400px){#page{max-width:1000px;}
+}
+@media (min-width:1450px){#page{max-width:1050px;}
+}
+@media (min-width:1500px){#page{max-width:950px;}
+}
+@media (min-width:1550px){#page{max-width:1000px;}
+}
+@media (min-width:1600px){#page{max-width:1050px;}
+}
+@media (min-width:1650px){#page{max-width:1100px;}
+}
+@media (min-width:1700px){#page{max-width:1150px;}
+}
+@media (min-width:1750px){#page{max-width:1200px;}
+}
+@media (max-width:500px){#h1-title-programmation-cours{text-align:center;}
+#python-programmation-logo{float:none;margin:auto;margin-bottom:30px;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+pre{display:block;padding:9.5px;margin:0 0 10px;font-size:14px;line-height:1.42857143;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;}
+pre{margin-top:20px;margin-bottom:20px;}
+pre{border:none;border-radius:0px;background-color:#efefef;}
+pre {-moz-tab-size: 3 !important;  -o-tab-size: 3 !important;  tab-size: 3 !important; }
+img { vertical-align: middle; }
+
+@media (max-width: 1000px) {
+footer{text-align:center; }
+}
+
+
+
+#menu_top_container {
+display:none;
+position: absolute;
+z-index: 99;
+width: 100%;
+background-color: #0C4B33 !important;
+text-align: center;
+top: 0px;
+}
+
+#menu_top a {
+position: relative;
+display: inline-block;
+padding: 2px 15px;
+font-size: 1.8em;
+margin-top: 0px;
+float: left;
+height: 100%;
+color: white;
+font-weight: bold;
+}
+
+@media (max-width: 375px) {
+#menu_top a {
+padding: 2px 8px;
+}
+}
+@media (max-width: 300px) {
+#menu_top a {
+padding: 2px 5px;
+}
+}
+@media (max-width: 259px) {
+#menu_top a {
+padding: 2px 1px;
+}
+}
+
+form[action="/page-contact"] input,
+form[action="/page-contact"] textarea
+{
+padding:10px;
+border:1px solid #eee;
+outline:none;
+margin:4px auto;
+}
+
+a:hover{ text-decoration: none !important; }
+
+
+@media (max-width: 992px) {
+
+#menu_main{ padding:0px; }
+#page{ margin-top:30px; }
+#menu_top_container{ display: block; }
+}
+
+strong{
+color: #445580 !important;
+background-color: rgba(232, 227, 227, 0.33) !important;
+font-weight:500 !important;
+}
+
+p.legende {
+font-weight: normal !important;
+font-size:0.9em;
+}
+
+.python_books_title{
+font-weight:bold;
+}
+.python_books > div{
+border:1px dashed #EEE;
+text-align:center;
+background-color: #E8E8E8;
+padding:10px;
+margin-bottom:20px;
+}
+
+.form_send_mail input,   
+.form_send_mail textarea {
+padding:5px;  
+margin-top:2px;
+}
+
+.form_send_textarea {
+min-height:200px;
+}
+
+
+/* navigation mobile */
+@media (max-width: 500px) {
+    .links_top > div{
+        padding-bottom:10px;
+    }
+    
+}
+
+#left_menu h3{
+color: #44B78C;
+font-weight: bold;
+}
+    </style><link rel='canonical' href='https://python.doctor/page-comprehension-list-listes-python-cours-debutants' />
+<script type="text/javascript">var ezouid = "1";</script><base href="https://python.doctor/page-comprehension-list-listes-python-cours-debutants"><script type='text/javascript'>
+var ezoTemplate = 'old_site_noads';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 284306;
+var ezdomain = 'python.doctor';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"ad_load_version":0,"city":"N'Djamena","country":"TD","days_since_last_visit":0,"domain_id":284306,"engaged_time_visit":128,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"is_return_visitor":true,"is_sitespeed":0,"last_page_load":"1670597855291","last_pageview_id":"fcf87a32-1957-4e1e-6c56-b313b606c958","lt_cache_level":0,"metro_code":0,"page_ad_positions":"","page_view_count":1,"page_view_id":"b86f4af3-d0b6-4be4-6966-a3deaee56804","position_selection_id":0,"postal_code":"","pv_event_count":0,"response_size_orig":30236,"response_time_orig":24,"serverid":"35.180.181.48:5911","state":"ND","t_epoch":1670598899,"template_id":120,"time_on_site_visit":12715,"url":"https://python.doctor/page-comprehension-list-listes-python-cours-debutants","user_id":0,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":549,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_284306=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["b86f4af3-d0b6-4be4-6966-a3deaee56804", "true"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script>
+<script type="text/javascript">var _audins_dom="python_doctor",_audins_did=284306;__ez.queue.addFile('/detroitchicago/cmbv2.js', '/detroitchicago/cmbv2.js?gcb=195-1&cb=04-3y02-8y06-13y07-2y19-7y0b-6y0d-21y13-4y17-5y1c-4y21-3y2f-4y59-2&cmbcb=117&sj=x04x02x06x07x19x0bx0dx13x17x1cx21x2fx59', true, [], true, false, true, false);</script>
+<script type="text/javascript" defer>__ez.queue.addFile('/detroitchicago/cmbdv2.js', '/detroitchicago/cmbdv2.js?gcb=195-1&cb=03-8y0c-6y18-5&cmbcb=117&sj=x03x0cx18', true, ['/detroitchicago/cmbv2.js'], true, false, true, false);</script></head><body><div id="menu_top_container"><div id="menu_top"><a href="/"><i class="fa fa-home"></i></a><a href="./page-cours-python-debutant-documentation" title="Python"><img src="/images/logo_python.png"/></a><a href="./page-cours-python-avance-documentation-francaise" title="Python avancé"><img src="/images/logo_python_best.png"/></a><a href="./page-django-cours-tutoriels-documentation-francaise" title="Python Django"><img src="/images/logo_django.png"/></a><a href="./page-raspberry-pi-apprendre-debutant-acheter-python" title="Python Raspberry pi"><img src="/images/logo_raspberry.png" style="margin-right:0px;padding-right:0px;"/></a><a href="#" onclick="go_to_menu();return false;" style="float:right;margin-left:0px;padding-left:0px;"><i class="glyphicon glyphicon-align-justify"></i></a></div></div><div id="pub_right" style="text-align:center;"></div><div id="page"><h1> Les compréhensions de liste python </h1><!-- breadcrumb --><div class="breadcrumb-list" xmlns:v="http://rdf.data-vocabulary.org/#"><span class="breadcrumb" typeof="v:Breadcrumb"><a href="./" property="v:title" rel="v:url"> Accueil </a></span><span class="chevron"> › </span><span class="breadcrumb" typeof="v:Breadcrumb"><a href="./page-cours-python-debutant-documentation" property="v:title" rel="v:url" title="Voir tous les articles de cette catégorie"> Python débutant </a></span><span class="chevron"> › </span><span class="breadcrumb-current"><a href="./page-comprehension-list-listes-python-cours-debutants" style="line-height:2.1em;"> Les compréhensions de liste python </a></span></div><div class="links_top"><div class="links_top_back"><a href="./page-apprendre-exceptions-except-python-cours-debutant"><i class="glyphicon glyphicon-chevron-left"></i> Les exceptions </a></div><div class="links_top_next"><a href="./page-apprendre-programmation-orientee-objet-poo-classes-python-cours-debutants"> Programmation orientée objet <i class="glyphicon glyphicon-chevron-right"></i></a></div></div><p> Un bon développeur cherchera toujours à augmenter sa productivité avec le temps. Il existe des astuces <strong> python </strong> qui permettent d&#39; <strong> optimiser le code </strong> . </p><p> Une de ces astuces est la <strong> compréhension de liste </strong> ( ou <strong> liste en compréhension </strong> ou <strong> list comprehension </strong> ). </p><p> L&#39;idée est simple: simplifier le code pour le rendre plus lisible et donc plus rapide à écrire et plus simple à maintenir. </p><h2> Syntaxe </h2><pre><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">function</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span> <span class="k">if</span> <span class="n">condition</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span>
+</pre><h2> Filter une liste </h2><p> Prenons un exemple d&#39;une liste: </p><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre><p> Nous voulons filtrer les valeurs de cette liste et ne garder que ceux dont la valeur est supérieure à 5: </p><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<span class="o">...</span>         <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">...</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre><p> Il est possible de faire exactement ce que fait ce bloc de code en une seule ligne: </p><pre><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre><h2> Exécuter une fonction sur chaque item d&#39;une liste </h2><p> Prenons l&#39;exemple d&#39;une conversion de string en integer de plusieurs items: </p><pre><span style="color:#808030; ">&gt;</span><span style="color:#808030; ">&gt;</span><span style="color:#808030; ">&gt;</span> items <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#0000e6; ">&#34;5&#34;</span><span style="color:#808030; ">,</span> <span style="color:#0000e6; ">&#34;10&#34;</span><span style="color:#808030; ">,</span> <span style="color:#0000e6; ">&#34;15&#34;</span><span style="color:#808030; ">]</span>
+<span style="color:#808030; ">&gt;</span><span style="color:#808030; ">&gt;</span><span style="color:#808030; ">&gt;</span> items <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#e34adc; ">int</span><span style="color:#808030; ">(</span>x<span style="color:#808030; ">)</span> <span style="color:#800000; font-weight:bold; ">for</span> x <span style="color:#800000; font-weight:bold; ">in</span> items<span style="color:#808030; ">]</span>
+<span style="color:#808030; ">&gt;</span><span style="color:#808030; ">&gt;</span><span style="color:#808030; ">&gt;</span> <span style="color:#800000; font-weight:bold; ">print</span>(items)
+<span style="color:#808030; ">[</span><span style="color:#008c00; ">5</span><span style="color:#808030; ">,</span> <span style="color:#008c00; ">10</span><span style="color:#808030; ">,</span> <span style="color:#008c00; ">15</span><span style="color:#808030; ">]</span>
+</pre><hr style="margin-top:30px;margin-bottom: 10px"/><p class="python_books_title"> Livres Python &amp; Django: conseils de lecture </p><div class="python_books"><div class="col-md-4 col-lg-4"><a href="https://www.amazon.fr/gp/product/2412028877/ref=as_li_tl?ie=UTF8&amp;camp=1642&amp;creative=6746&amp;creativeASIN=2412028877&amp;linkCode=as2&amp;tag=pythondjango-21&amp;linkId=3d6fcc1acbf10a574237bac90c77c153" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=FR&amp;ASIN=2412028877&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=pythondjango-21"/></a><img alt="" border="0" height="1" src="//ir-fr.amazon-adsystem.com/e/ir?t=pythondjango-21&amp;l=am2&amp;o=8&amp;a=2412028877" style="border:none !important; margin:0px !important;" width="1"/></div><div class="col-md-4 col-lg-4"><a href="https://www.amazon.fr/gp/product/B00K70U8Q4/ref=as_li_tl?ie=UTF8&amp;camp=1642&amp;creative=6746&amp;creativeASIN=B00K70U8Q4&amp;linkCode=as2&amp;tag=pythondjango-21&amp;linkId=d38f03d2036bc4b8c768072b3bd6594f" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=FR&amp;ASIN=B00K70U8Q4&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=pythondjango-21"/></a><img alt="" border="0" height="1" src="//ir-fr.amazon-adsystem.com/e/ir?t=pythondjango-21&amp;l=am2&amp;o=8&amp;a=B00K70U8Q4" style="border:none !important; margin:0px !important;" width="1"/></div><div class="col-md-4 col-lg-4"><a href="https://www.amazon.fr/gp/product/2212134347/ref=as_li_tl?ie=UTF8&amp;camp=1642&amp;creative=6746&amp;creativeASIN=2212134347&amp;linkCode=as2&amp;tag=pythondjango-21&amp;linkId=5fd44d5fa72f6436ab614c1c8be9ca53" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=FR&amp;ASIN=2212134347&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=pythondjango-21"/></a><img alt="" border="0" height="1" src="//ir-fr.amazon-adsystem.com/e/ir?t=pythondjango-21&amp;l=am2&amp;o=8&amp;a=2212134347" style="border:none !important; margin:0px !important;" width="1"/></div></div><div class="links_top"><div class="links_top_back"><a href="./page-apprendre-exceptions-except-python-cours-debutant"><i class="glyphicon glyphicon-chevron-left"></i> Les exceptions </a></div><div class="links_top_next"><a href="./page-apprendre-programmation-orientee-objet-poo-classes-python-cours-debutants"> Programmation orientée objet <i class="glyphicon glyphicon-chevron-right"></i></a></div></div><div style="background-color: #6d6d6d ; clear:both; height:50px; padding:5px;"><a href="./page-cours-python-debutant-documentation" style="float:left;width:25%;text-align:center" title="Python"><img src="/images/logo_python.png"/></a><a href="./page-cours-python-avance-documentation-francaise" style="float:left;width:25%;text-align:center" title="Python avancé"><img src="/images/logo_python_best.png"/></a><a href="./page-django-cours-tutoriels-documentation-francaise" style="float:left;width:25%;text-align:center" title="Python Django"><img src="/images/logo_django.png"/></a><a href="./page-raspberry-pi-apprendre-debutant-acheter-python" style="float:left;width:25%;text-align:center" title="Python Raspberry pi"><img src="/images/logo_raspberry.png" style="margin-right:0px;padding-right:0px;"/></a></div><br ;="" style="clear:both"/><div class="container" id="menu_main"><a href="./" id="logo_menu" title="Cours python pour débutants et experts"><img src="/images/python.png" title="Apprendre python django cours débutant raspberry pi tutoriels "/></a><br/><!-- Left menu --><div id="left_menu"><div><div><h3> Python débutant </h3><ul><li><a href="./" title="Python language de programmation apprendre cours tutoriaux django informatique dévelopement web internet script"> Présentation Python </a></li><li><a href="./page-apprendre-installer-python-ordinateur" title="Installer Python sur votre ordinateur"> Installer Python </a></li><li><a href="./page-utiliser-interpreteur-python" title="Interpréteur python"> Interpréteur python </a></li><li><a href="./page-editeurs-python-gratuits-payants-ide" title=" Editeurs IDE Python"> IDE Editeurs python </a></li><li><a href="./page-apprendre-variables-debutant-python" title="Calculs et variables python"> Calculs et variables </a></li><li><a href="./page-apprendre-listes-list-tableaux-tableaux-liste-array-python-cours-debutant" title="Les listes python"> Les listes </a></li><li><a href="./page-apprendre-tuples-tuple-python" title="Les tuples python"> Les tuples </a></li><li><a href="./page-apprendre-dictionnaire-python" title="Les dictionnaires python"> Les dictionnaires </a></li><li><a href="./page-apprendre-creer-fonction-en-python" title="Les fonctions python"> Les fonctions </a></li><li><a href="./page-builtin-built-in-fonctions-internes-python" title="Les fonctions natives de python"> Les fonctions natives </a></li><li><a href="./page-apprendre-conditions-structures-conditionnelles-if-else-python-cours-debutant" title="IF ELIF ELSE Python Conditions"> Conditions if elif else </a></li><li><a href="./page-apprendre-boucles-python-loop" title="Les boucles for et while Python"> Boucle for / while </a></li><li><a href="./page-python-modules-package-module-cours-debutants-informatique-programmation" title="Les modules et les packages en python"> Les modules/packages </a></li><li><a href="./page-apprendre-exceptions-except-python-cours-debutant" title="Les exceptions python"> Les exceptions </a></li><li><a href="./page-comprehension-list-listes-python-cours-debutants" title="Les compréhensions de liste python"> Les compréhensions de liste </a></li><li><a href="./page-apprendre-programmation-orientee-objet-poo-classes-python-cours-debutants" title="Programmation orientée objet en python /  classes"> Programmation orientée objet </a></li><li><a href="./page-decorateurs-decorator-python-cours-debutants" title="Les décorateurs python"> Les décorateurs </a></li><li><a href="./page-iterateurs-iterator-generateur-generator-python" title="Les itérateurs et les générateurs python"> Les itérateurs/générateurs </a></li><li><a href="./page-expressions-regulieres-regular-python" title="Les expressions régulières en python"> Expressions régulières </a></li><li><a href="./page-lire-ecrire-creer-fichier-python" title="Créer lire et écrire dans un fichier en python"> Lire / Editer un fichier </a></li><li><a href="./page-pep-8-bonnes-pratiques-coder-python-apprendre" title="PEP 8 apprendre les bonnes pratiques pour coder en python"> PEP 8 / bonnes pratiques </a></li><li><a href="./page-black-code-formatter" title="Black, le formateur de code python sans compromis"> Black formateur de code </a></li></ul></div><div><h3> Python avancé </h3><ul><li><a href="./page-syntaxe-differente-python2-python3-python-differences" title="Différences entres python 2 et python 3"> Différences python 2 / 3 </a></li><li><a href="./page-python-encodage-encode-decode-unicode-ascii-codec-character-accents-probleme-string-utf8" title="Encodage python"> Encodage python </a></li><li><a href="./page-pip-installer-librairies-automatiquement" title="Pip installe vos librairies en toute simplicité"> Pip installe vos librairies </a></li><li><a href="./page-virtualenv-python-environnement-virtuel" title="Environnement virtuel en python"> Virtualenv </a></li><li><a href="./page-debogueur-debugger-debug-python-ipython-pdb-pdbpp-cours-tutoriel-script" title="Debug Python ipdb"> Debug </a></li><li><a href="./page-python-path-pythonpath" title="Python path"> Python Path </a></li><li><a href="./page-gestion-fichiers-dossiers-python" title="Gestion des fichiers et des dossiers en python"> Gestion fichiers et dossiers </a></li><li><a href="./page-tkinter-interface-graphique-python-tutoriel" title="Interface graphique Tkinter python"> Interface graphique tKinter </a></li><li><a href="./page-creer-graphiques-scientifiques-python-apprendre" title="Créer des graphiques scientifiques avec python"> Graphiques scientifiques </a></li><li><a href="./page-programmation-asynchrone-python-thread-threading" title="La programmation asynchrone avec python"> Programmation asynchrone </a></li><li><a href="./page-xml-python-xpath" title="XML et python"> XML et python </a></li><li><a href="./page-beautifulsoup-html-parser-python-library-xml" title="BeautifulSoup / parser vos XML et HTML"> BeautifulSoup / HTML parser </a></li><li><a href="./page-cx_freeze-creer-executables-python-cours-apprendre" title="Créer des exécutables python avec cx_Freeze"> Créer un exécutable </a></li><li><a href="./page-dossier-partage-samba-reseau-python-fstab" title="Dossier partagé / samba"> Dossier partagé / samba </a></li><li><a href="./page-python-ftp-creer-copier-voir-dossier-folder-fichiers" title="FTP et python"> FTP </a></li><li><a href="./page-python-ssh-connect-host-distant-sftp-os-fabric-client" title="Fabric SSH python"> Fabric SSH </a></li><li><a href="./page-python-envoyer-mail-smtp" title="Envoyer un mail par SMTP en python"> Envoyer un mail SMTP </a></li><li><a href="./page-reseaux-sockets-python-port" title="Python réseau socket"> Réseau / socket </a></li><li><a href="./page-database-data-base-donnees-query-sql-mysql-postgre-sqlite" title="Base de données et Python"> Base de données </a></li><li><a href="./page-python-serveur-web-creer-rapidement" title="Créer un serveur web rapidement en python"> Créer un serveur web </a></li><li><a href="./page-websocket-python-crossbar-push-socket-publish-subscribe-call-remote-register-wamp" title="Websocket Python avec Crossbar"> Websocket &amp; Crossbar </a></li><li><a href="./page-generateur-site-statique-python-django" title="Générateur de sites statiques"> Générateur de site statique </a></li></ul></div><div><h3> Django </h3><ul><li><a href="./page-django-introduction-python" title="Présentation de django"> Présentation Django </a></li><li><a href="./page-django-installer-python" title="Installer django"> Installer Django </a></li><li><a href="./page-django-initialiser-creer-python" title="Initialiser un projet django"> Initialiser un projet Django </a></li><li><a href="./page-django-application-creer-python" title="Créer une application Django"> Créer une application Django </a></li><li><a href="./page-django-orm-apprendre-base-donnees-database-queryset-modeles" title="ORM Django"> ORM Django </a></li><li><a href="./page-django-login-authentification-de-base-apprendre-creer-cours-tutoriel-python" title="Login Django"> Login Django </a></li><li><a href="./page-django-champs-modeles-orm-model" title="Le champ des modèles Django"> Les champs des modèles </a></li><li><a href="./page-django-interface-admin-administration-settings-django-contrib-auth" title="Interface admin Django"> Interface admin Django </a></li><li><a href="./page-django-query-set-queryset-manager" title="Django Queryset"> Queryset </a></li><li><a href="./page-django-many-to-many-manytomany-relation-relationships-orm" title="Many to Many Django"> Many to many relation </a></li><li><a href="./page-django-vues-views-generic-generiques-python" title="Les vues Django"> Les vues </a></li><li><a href="./page-django-formulaires-forms-champs-fields" title="Les formulaires Django"> Les formulaires </a></li><li><a href="./page-django-csrf-token-securite-formulaires-python-ajax-post-jquery-anguarjs" title="CSRF Token sécurité Django"> CSRF Token </a></li><li><a href="./page-django-middlewares-vues-views-request-response-process-before-after-avant-apres" title="Middleware Django"> Les middlewares </a></li><li><a href="./page-django-templates-structure-template-HTML-variables-boucles-tags-filtre-page-dry-application-projet-modifier-dossier" title="Templates Django"> Templates Django </a></li><li><a href="./page-django-context-processor-template" title="Context Processor Django"> Context Processor </a></li><li><a href="./page-django-signaux-signal-signals-python-cours-apprendre-tutoriel-example" title="Signaux Django"> Signaux Django </a></li><li><a href="./page-django-xadmin-bootstrap-twitter-theme-export-xls-csv-xml-python-web-plugin" title="Xadmin Django thème bootstrap twitter"> Xadmin </a></li><li><a href="./page-django-admin-select2-admin-ajax-many-to-many-foreign-key-form-widget-django_select2" title="Select2 et Django"> Django select2 </a></li><li><a href="./page-django-crispy-form-formulaire-bootstrap-twitter-html-fieldset-inline-dynamique-template" title="Crispy Form Django"> Crispy Forms </a></li><li><a href="./page-django-angularjs-angular-js-coffee-script-coffeescript-python-cours-tuto-tutoriel-exemples" title="AngularJS et Django"> AngularJS et Django </a></li><li><a href="./page-django-comment-uploader-fichier-image-cours-apprendre-python-upload-file" title="Upload un fichier en Ajax avec Django"> Uploader un fichier en ajax </a></li><li><a href="./page-django-rest-framework-drf-cours-tuto-tutoriel-exemples" title="Django REST Framework DRF API"> Django Rest Framework </a></li><li><a href="./page-django-deploiement-python-mise-en-production-linux-gunicorn-supervisor-nginx-installer-configurer-serveur-http-web" title="Django déploiement Gunicorn Supervisor Nginx WSGI"> Django déploiement </a></li></ul></div><div><h3> Raspberry Pi </h3><ul><li><a href="./page-raspberry-pi-presentation-python-c-est-quoi-apprendre-nano-ordinateur-video" title="Présentation raspberry pi"> Présentation Raspberry pi </a></li><li><a href="./page-raspberry-pi-install-installer-debian-linux-windows-ubuntu" title="Installer raspbian (OS linux) sur raspberry pi"> Installer Raspbian </a></li><li><a href="./page-raspberry-pi-adresse-ip-statique-address-static" title="Addresse IP statique / raspberry pi"> IP statique </a></li><li><a href="./page-raspberry-pi-partage-share-dossier-folder-samba-debian" title="Partager un dossier debian / raspberry pi"> Samba / partager un dossier </a></li><li><a href="./page-raspberry-pi-lecture-lire-video-1080p-full-hd-omxplayer-ligne-commande" title="OMXPlayer FULL HD 1080px raspberry pi"> Lire vidéo 1080p </a></li><li><a href="./page-raspberry-pi-installer-vpn-dns-openvpn-debian-python" title="Installer VPN raspberry pi"> Installer VPN </a></li><li><a href="./page-raspberry-pi-installer-client-torrent-transmission-download-dl-python" title="Installer et utiliser un client torrent"> Client torrent </a></li></ul></div><div><h3> Site </h3><ul><li><a href="./page-contact" title="Contact"> Contacter l&#39;auteur </a></li><li><a href="./page-mentions-legales" title="Mentions légales"> Mentions légales </a></li></ul></div></div></div></div><!-- /container --><hr/><div style="clear:both;"><footer><p style="color:#ccc;text-align:center;"> Apprendre programmation cours python 3 <br/> Django internet web - Documentation débutant et expert <br/><a href="/en/" hreflang="en" title="Python Django"> Version anglaise </a></p><p></p><p></p></footer></div><!-- end page --></div><script type="text/javascript">
+   //<![CDATA[
+var __current_page = './page-comprehension-list-listes-python-cours-debutants';
+//]]>
+  </script><!-- Opti google --><noscript id="deferred-styles"><link href=/css/all.css rel=stylesheet type=text/css></noscript><script async="" src="/js/main.js?v1">
+  </script><script>
+   var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+  </script><script type='text/javascript' style='display:none;' async>
+</script>
+
+<script type="text/javascript" data-cfasync="false"></script></body></html>

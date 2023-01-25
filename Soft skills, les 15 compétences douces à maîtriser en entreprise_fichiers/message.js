@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){if($('.smessage').length>0){setTimeout(function(){$('.smessage').remove();},6000);}});
